@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQBot</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h1>Cofee Shop</h1>
+    <div class="chat-container">
+        <div id="chat-box"></div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Type your question">
+            <button onclick="sendMessage()">Sent</button>
+        </div>
+    </div>
 
+    <script>
+        function addMessage(sender,text){
+            const chatBox=document.getElementById("chat-box")
+            const message=document.createElement("div")
+            message.className=sender
+            message.textContent=text
+            chatBox.appendChild(message)
+            chatBox.scrollTop=chatBox.scrollHeight
+        }
+
+        
+
+        function sendMessage(){
+            const input = document.getElementById("user-input")
+            const message=input.value.trim()
+            if(!message) return
+
+            addMessage("user", "You : " +message)
+            input.value=""
+
+            fetch("/get",{
+                method:"POST",
+                headers:{"content-Type":"application/json"},
+                body:JSON.stringify({message})
+            })
+
+            .then(res=>res.json())
+            .then(data=>addMessage("bot","Shop : "+data.reply))
+        }
+
+        input= addEventListener("keypress",function(event){
+            if(event.key==='Enter'){
+                event.preventDefault()
+                sendMessage()
+            }
+        })
+
+    </script>
+</body>
+</html>

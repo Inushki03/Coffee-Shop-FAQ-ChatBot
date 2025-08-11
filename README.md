@@ -26,5 +26,4 @@ This chatbot answers frequently asked questions (FAQs) related to a coffee shop.
 
 
 
-   ```bash
-   git clone <repository_url>
+

@@ -25,6 +25,6 @@ This chatbot answers frequently asked questions (FAQs) related to a coffee shop.
 - `static/` — static files like CSS and images.
 
 
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/9390bb4d-8c80-404b-9b4b-6a78baffe3b4" />
+<img width="1919" height="911" alt="image" src="https://github.com/user-attachments/assets/758aacaf-4fab-4d64-b4d9-d249b0170aca" />
 
 

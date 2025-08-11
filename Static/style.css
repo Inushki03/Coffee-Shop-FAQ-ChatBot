@@ -1,1 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #C7AD7F;
+    
+}
 
+h1{
+    text-align: center;
+    font-family:cursive;
+    padding-top: 20px;
+    font-size: 60px;
+    color: white;
+}
+.chat-container {
+    width: 700px;
+    margin: 50px auto;
+    background:white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+#chat-box {
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #CC9767;
+}
+.user {
+    text-align: right;
+    color:#8d593e;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    
+}
+.bot {
+    text-align: left;
+    color:#8B4411;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+}
+button {
+    background: #95460e;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: #8B4411;
+}
